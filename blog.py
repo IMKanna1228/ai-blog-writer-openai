@@ -1,6 +1,5 @@
-import os
+
 import openai
-import config
 
 
 openai.api_key = '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'
