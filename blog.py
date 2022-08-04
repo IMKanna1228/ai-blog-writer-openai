@@ -3,7 +3,7 @@ import openai
 import config
 
 
-openai.api_key = config.OPENAI_API_KEY
+openai.api_key = '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'
 
 
 def generateBlogTopics(prompt1):
