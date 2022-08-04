@@ -9,17 +9,17 @@ def index():
     if request.method == 'POST':
         if 'form1' in request.form:
             prompt = request.form['blogTopic']
-            blogT = blog.generateBlogTopics(prompt)
+            blogT = blog.generateideas1(prompt)
             blogTopicIdeas = blogT.replace('\n', '<br>')
 
         if 'form2' in request.form:
             prompt = request.form['blogSection']
-            blogT = blog.generateBlogSections(prompt)
+            blogT = blog.generateideas2(prompt)
             blogSectionIdeas = blogT.replace('\n', '<br>')
 
         if 'form3' in request.form:
             prompt = request.form['blogExpander']
-            blogT = blog.blogSectionExpander(prompt)
+            blogT = blog.generateideas3(prompt)
             blogExpanded = blogT.replace('\n', '<br>')
 
 
