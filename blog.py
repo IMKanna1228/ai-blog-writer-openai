@@ -5,10 +5,10 @@ import openai
 openai.api_key = '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'
 
 
-def generateBlogTopics(prompt1):
+def generateideas1(prompt1):
     response = openai.Completion.create(
       engine="davinci-instruct-beta-v3",
-      prompt="Generate blog topics on: {}. \n \n 1.  ".format(prompt1),
+      prompt="Please ask anything?: {}. \n \n 1.  ".format(prompt1),
       temperature=0.7,
       max_tokens=100,
       top_p=1,
@@ -18,10 +18,10 @@ def generateBlogTopics(prompt1):
 
     return response['choices'][0]['text']
 
-def generateBlogSections(prompt1):
+def generateideas2(prompt1):
     response = openai.Completion.create(
-      engine="davinci-instruct-beta-v3",
-      prompt="Expand the blog title in to high level blog sections: {} \n\n- Introduction: ".format(prompt1),
+      engine="text-davinci-002",
+      prompt="Enter the ideas you have: {} \n\n- Introduction: ".format(prompt1),
       temperature=0.6,
       max_tokens=100,
       top_p=1,
@@ -32,12 +32,12 @@ def generateBlogSections(prompt1):
     return response['choices'][0]['text']
 
 
-def blogSectionExpander(prompt1):
+def generateideas3(prompt1):
     response = openai.Completion.create(
-      engine="davinci-instruct-beta-v3",
-      prompt="Expand the blog section in to a detailed professional , witty and clever explanation.\n\n {}".format(prompt1),
+      engine="text-curie-001",
+      prompt="Type your ideas here.\n\n {}".format(prompt1),
       temperature=0.7,
-      max_tokens=200,
+      max_tokens=100,
       top_p=1,
       frequency_penalty=0,
       presence_penalty=0
