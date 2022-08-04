@@ -1,11 +1,6 @@
 from flask import Flask, render_template, request
 import blog
 
-
-def page_not_found(e):
-  return render_template('404.html'), 404
-
-
 app = Flask(__name__)
 
 @app.route('/', methods=["GET", "POST"])
