@@ -2,7 +2,7 @@
 import openai
 
 
-openai.api_key = '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'
+openai.api_key = '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'
 
 
 def generateideas1(prompt1):
